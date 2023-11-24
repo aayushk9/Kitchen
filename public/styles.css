@@ -6,6 +6,32 @@
   
   body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://superiorcabinets.ca/wp-content/uploads/2018/02/2018_Calgary_AVENTURA_LowRes_Kitchen2.jpg');
+    background-size: auto 100%;
+    background-position: right top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+
+  input[type="text"] {
+    border-radius: 8px;
+    padding: 8px;
+}
+
+button {
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://superiorcabinets.ca/wp-content/uploads/2018/02/2018_Calgary_AVENTURA_LowRes_Kitchen2.jpg');
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
   }
   
   header {
@@ -23,6 +49,7 @@
   }
   
   h2 {
+    margin-bottom: 300px;
     font-size: 30px;
     color: #272727;
     margin: 0; 
@@ -40,13 +67,14 @@
   
   header h1 {
     font-size: 3rem;
-    color: white;
+    color: black;
     margin-bottom: 10px;
   }
   
   form {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 120px
   }
   
   form input {
@@ -63,4 +91,13 @@
     cursor: pointer;
   }
   
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
   
