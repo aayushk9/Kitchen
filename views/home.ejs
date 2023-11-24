@@ -10,13 +10,41 @@
     <img src="https://superiorcabinets.ca/wp-content/uploads/2018/02/2018_Calgary_AVENTURA_LowRes_Kitchen2.jpg" alt="">
     <h2>GET ONE STEP CLOSER TO YOUR DREAM KITCHEN</h2>
     <h3>Enquire now</h3>
-    <input type="text", placeholder="Name">
-    <input type="text", placeholder="Email">
-    <input type="text", placeholder="Mobile">
-    <input type="text", placeholder="City">
-    <button type="submit">Submit</button>
-    <h2>Keep getting inspired!</h2>
-    <input type="text", placeholder="Enter your mail id">
-    <button type="button">SIGN UP</button>
+    <form action="/" method="POST" id="myform">
+        <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Email" name="email">
+        <input type="text", placeholder="Mobile", name="mobile">
+        <input type="text", placeholder="City", name="city">
+        <button type="submit">Submit</button>
+        <h2>Keep getting inspired!</h2>
+        <input type="text", placeholder="Enter your mail id", name="inputMail">
+        <button type="button", name="signUp">SIGN UP</button>
+    </form>
+
+    <script>
+        document.getElementById('myform').addEventListener('submit', async function(event){
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        fetch('/', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data =>{
+            if(data.success){
+                alert('Successfully Submitted');
+            } else{
+                alert('Error Occured');
+            }
+        })
+        .catch(err=> {
+          console.log(`Error: ${err}`);
+          alert('Error Connecting to the server');
+        });
+    });
+    </script>
 </body>
 </html>
+
+
