@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aayush's Kitchen</title>
+    <title>Aayush Kitchens</title>
+    <link rel="stylesheet" href="/styles.css"> 
+
 </head>
-<body>
-    <h1>Aayush's Kitchen</h1>
-    <img src="https://superiorcabinets.ca/wp-content/uploads/2018/02/2018_Calgary_AVENTURA_LowRes_Kitchen2.jpg" alt="">
-    <h2>GET ONE STEP CLOSER TO YOUR DREAM KITCHEN</h2>
+
+<h1></h1>
+    
+    <h2></h2>
     <h3>Enquire now</h3>
-    <form action="/" method="POST" id="myform">
+    <form action="/" method="POST" id="myform",enctype="multipart/form-data" >
         <input type="text" placeholder="Name" name="name">
-        <input type="text" placeholder="Email" name="email">
-        <input type="text", placeholder="Mobile", name="mobile">
-        <input type="text", placeholder="City", name="city">
+        <input type="text" placeholder="Email" name="email" required="true">
+        <input type="text" placeholder="Mobile" name="mobile" required="true">
+        <input type="text" placeholder="City" name="city" required="true">
         <button type="submit">Submit</button>
-        <h2>Keep getting inspired!</h2>
-        <input type="text", placeholder="Enter your mail id", name="inputMail">
-        <button type="button", name="signUp">SIGN UP</button>
     </form>
 
     <script>
@@ -33,7 +32,7 @@
         .then(response => response.json())
         .then(data =>{
             if(data.success){
-                alert('Successfully Submitted');
+                alert('Subscription confirmed! Elevate your kitchen space.');
             } else{
                 alert('Error Occured');
             }
@@ -44,7 +43,11 @@
         });
     });
     </script>
+    <footer> 
+        <p>&copy; 2023 Aayush Kitchens. All Rights Reserved.</p>
+    </footer>
 </body>
-</html>
+
+</html> 
 
 
